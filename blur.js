@@ -11,7 +11,7 @@ function whenDone(){
                     var justTemp_2 = y[r].outerHTML.replace(/class=/, "style='animation-delay:20ms;' class=");
                     var justTemp_3 = y[r].outerHTML.replace(/class=/, "style='animation-delay:40ms;' class=");
                     var justTemp_4 = y[r].outerHTML.replace(/class=/, "style='animation-delay:60ms;' class=");
-                    y[r].outerHTML = justTemp_1+justTemp_2+justTemp_3+justTemp_4;
+                    y[r].outerHTML = justTemp_4+justTemp_3+justTemp_2+justTemp_1;
                     r += 3;
                 }
             }
@@ -30,7 +30,7 @@ function whenDone(){
                     var justTemp_2 = y[r].outerHTML.replace(/class=/, "style='animation-delay:20ms;opacity:.75;' class=");
                     var justTemp_3 = y[r].outerHTML.replace(/class=/, "style='animation-delay:40ms;opacity:.5;' class=");
                     var justTemp_4 = y[r].outerHTML.replace(/class=/, "style='animation-delay:60ms;opacity:.25;' class=");
-                    y[r].outerHTML = justTemp_1+justTemp_2+justTemp_3+justTemp_4;
+                    y[r].outerHTML = justTemp_4+justTemp_3+justTemp_2+justTemp_1;
                     r += 3;
                 }
             }
@@ -46,7 +46,7 @@ function blurMe(e){
     var justTemp_2 = c.outerHTML.replace(/class=/, "style='animation-delay:20ms;' class=");
     var justTemp_3 = c.outerHTML.replace(/class=/, "style='animation-delay:40ms;' class=");
     var justTemp_4 = c.outerHTML.replace(/class=/, "style='animation-delay:60ms;' class=");
-    c.outerHTML = justTemp_1+justTemp_2+justTemp_3+justTemp_4;
+    c.outerHTML = justTemp_4+justTemp_3+justTemp_2+justTemp_1;
 }
 function fadeMe(e){
     var c = e.target.parentNode;
@@ -55,5 +55,5 @@ function fadeMe(e){
     var justTemp_2 = c.outerHTML.replace(/class=/, "style='animation-delay:20ms;opacity:.75;' class=");
     var justTemp_3 = c.outerHTML.replace(/class=/, "style='animation-delay:40ms;opacity:.5;' class=");
     var justTemp_4 = c.outerHTML.replace(/class=/, "style='animation-delay:60ms;opacity:.25;' class=");
-    c.outerHTML = justTemp_1+justTemp_2+justTemp_3+justTemp_4;
+    c.outerHTML = justTemp_4+justTemp_3+justTemp_2+justTemp_1;
 }
