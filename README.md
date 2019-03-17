@@ -1,5 +1,5 @@
-# **MotionBlurJS**
-## What is **MotionBlurJS**
+# MotionBlurJS
+## What is MotionBlurJS
 **MotionBlurJS** is a lightweight JavaScript library that allows your animations to shine with homemade native CSS Motion Blur and Motion Fade while keeping your code clean and your CSS animations smooth.
 
 ## How does it work
