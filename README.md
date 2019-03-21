@@ -21,6 +21,7 @@ or
 <div id="yourId" class="fadejs someClass"></div> 
 ```
 ## The dynamic method
+The dynamic method requires the same script linking as the simple method shown above.<br/>
 This method will allow you to dynamically blur the objects even if they won’t load with the page itself, to achieve this just add this img tag inside the div you want to blur, like so:
 ```HTML
 <div id="yourId" class="someClass">
