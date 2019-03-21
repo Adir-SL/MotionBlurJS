@@ -33,6 +33,20 @@ or
     <img src="" onerror="fadeMe(event);" style="display:none !important;" />
 </div>
 ```
+## The SVG method
+This method can add motion blur to SVG elements and .SVG files, by simply linking to it first thing inside the svg tag, like so:
+```HTML
+<svg ...>
+    <script xlink:href="https://www.motionblurjs.com/blurSVG.js" />
+```
+After that, all you have to do is naming the class of the element you want to blur to either the **blurjs** or **fadejs** class, you can mix it with your current classes as well by separating those with spaces, like so: 
+```HTML
+<circle id="yourId" class="st0 blurjs" cx="200" cy="200" r="42" />
+```
+or
+```HTML
+<circle id="yourId" class="st0 blurjs" cx="200" cy="200" r="42" />
+```
 
 ## Bug report
 This code is under active development, if you experience any bugs or kinks, feel free to report those through Github or by mail: motionblurjs@gmail.com please mention which method you were using and if possible, send me your code snippets,<br />Happy coding !
