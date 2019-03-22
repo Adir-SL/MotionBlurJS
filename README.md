@@ -2,9 +2,6 @@
 ## What is MotionBlurJS
 **MotionBlurJS** is a lightweight JavaScript library that allows your animations to shine with homemade native CSS Motion Blur and Motion Fade while keeping your code clean and your CSS animations smooth.
 
-## How does it work
-**MotionBlurJS** will duplicate your objects so they can get blurred or faded on runtime, the code will compile into a clean version of the motion blur and the DOM will only show the necessary objects, in order for it to work properly the blurred object has to be positioned absolutely and to be animated with keyframes CSS animation
-
 ## The simple method
 You can use *MotionBlurJS* by simply linking to it in your document head tag like so:
 ```HTML
@@ -48,6 +45,8 @@ or
 ```HTML
 <circle id="yourId" class="st0 blurjs" cx="200" cy="200" r="42" />
 ```
+## How does it work
+**MotionBlurJS** will duplicate your objects so they can get blurred or faded on runtime, the DOM will only show the necessary objects (no pesky img tags) in order for it to work properly the blurred object has to be positioned absolutely and to be animated with CSS animation.
 
 ## Bug report
 This code is under active development, if you experience any bugs or kinks, feel free to report those through Github or by mail: motionblurjs@gmail.com please mention which method you were using and if possible, send me your code snippets,<br />Happy coding !
