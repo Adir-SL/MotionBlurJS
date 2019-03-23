@@ -45,7 +45,7 @@ After that, all you have to do is naming the class of the element you want to bl
 ```
 or
 ```HTML
-<circle id="yourId" class="st0 blurjs" cx="200" cy="200" r="42" />
+<circle id="yourId" class="st0 fadejs" cx="200" cy="200" r="42" />
 ```
 ## How does it work
 **MotionBlurJS** will duplicate your objects so they can get blurred or faded on runtime, the DOM will only show the necessary objects (no pesky img tags) in order for it to work properly the blurred object has to be positioned absolutely and to be animated with CSS animation.
