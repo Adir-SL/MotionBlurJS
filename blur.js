@@ -1,3 +1,14 @@
+function opacityFactor (opacity, f) {
+    return ((+opacity * f)).toString();
+}
+function getOpacityAttr(el) {
+    let opacity = '1';
+    let _originalOpacity_ = el.outerHTML.match(/(?<=fadejs-data="opacity:).(([0-9]\d*(\.\d+)?;)|([0-9]\d*(\.\d+)?"))/gm);
+    if (_originalOpacity_ && _originalOpacity_.length > 0) {
+        opacity = _originalOpacity_[0].slice(0, _originalOpacity_[0].length - 1).replace(/opacity:/, '');
+        opacity = (+opacity / 2).toFixed(2).toString();
+    } return opacity;
+}
 function whenDone(){
     var x = document.getElementsByClassName("blurjs");
     var i;
@@ -26,10 +37,11 @@ function whenDone(){
             var r;
             for (r = 0; r < y.length; r++) {
                 if(y[r].className.search("fadejs") >= 0){
-                    var justTemp_1 = y[r].outerHTML.replace(/class=/, "style='animation-delay:0ms;opacity:1;' class=");
-                    var justTemp_2 = y[r].outerHTML.replace(/class=/, "style='animation-delay:20ms;opacity:.75;' class=");
-                    var justTemp_3 = y[r].outerHTML.replace(/class=/, "style='animation-delay:40ms;opacity:.5;' class=");
-                    var justTemp_4 = y[r].outerHTML.replace(/class=/, "style='animation-delay:60ms;opacity:.25;' class=");
+                    let opacity = getOpacityAttr(y[r]);
+                    var justTemp_1 = y[r].outerHTML.replace(/class=/, "style='animation-delay:0ms;opacity:" + opacityFactor(opacity, 1) + ";' class=");
+                    var justTemp_2 = y[r].outerHTML.replace(/class=/, "style='animation-delay:20ms;opacity:" + opacityFactor(opacity, .75) + ";' class=");
+                    var justTemp_3 = y[r].outerHTML.replace(/class=/, "style='animation-delay:40ms;opacity:" + opacityFactor(opacity, .5) + ";' class=");
+                    var justTemp_4 = y[r].outerHTML.replace(/class=/, "style='animation-delay:60ms;opacity:" + opacityFactor(opacity, .25) + ";' class=");
                     y[r].outerHTML = justTemp_4+justTemp_3+justTemp_2+justTemp_1;
                     r += 3;
                 }
@@ -51,9 +63,10 @@ function blurMe(e){
 function fadeMe(e){
     var c = e.target.parentNode;
     c.getElementsByTagName("img")[0].outerHTML="";
-    var justTemp_1 = c.outerHTML.replace(/class=/, "style='animation-delay:0ms;opacity:1;' class=");
-    var justTemp_2 = c.outerHTML.replace(/class=/, "style='animation-delay:20ms;opacity:.75;' class=");
-    var justTemp_3 = c.outerHTML.replace(/class=/, "style='animation-delay:40ms;opacity:.5;' class=");
-    var justTemp_4 = c.outerHTML.replace(/class=/, "style='animation-delay:60ms;opacity:.25;' class=");
+    let opacity = getOpacityAttr(y[r]);
+    var justTemp_1 = c.outerHTML.replace(/class=/, "style='animation-delay:0ms;opacity:" + opacityFactor(opacity, 1) + ";' class=");
+    var justTemp_2 = c.outerHTML.replace(/class=/, "style='animation-delay:20ms;opacity:" + opacityFactor(opacity, .75) + ";' class=");
+    var justTemp_3 = c.outerHTML.replace(/class=/, "style='animation-delay:40ms;opacity:" + opacityFactor(opacity, .5) + ";' class=");
+    var justTemp_4 = c.outerHTML.replace(/class=/, "style='animation-delay:60ms;opacity:" + opacityFactor(opacity, .25) + ";' class=");
     c.outerHTML = justTemp_4+justTemp_3+justTemp_2+justTemp_1;
 }
