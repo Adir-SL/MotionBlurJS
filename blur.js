@@ -102,15 +102,6 @@ function blurMe(e){
     var justTemp_4 = c.outerHTML.replace(/class=/, "style='animation-delay:60ms;' class=");
     c.outerHTML = justTemp_4+justTemp_3+justTemp_2+justTemp_1;
 }
-function blurMe(e){
-    var c = e.target.parentNode;
-    c.getElementsByTagName("img")[0].outerHTML="";
-    var justTemp_1 = c.outerHTML.replace(/class=/, "style='animation-delay:0ms;' class=");
-    var justTemp_2 = c.outerHTML.replace(/class=/, "style='animation-delay:20ms;' class=");
-    var justTemp_3 = c.outerHTML.replace(/class=/, "style='animation-delay:40ms;' class=");
-    var justTemp_4 = c.outerHTML.replace(/class=/, "style='animation-delay:60ms;' class=");
-    c.outerHTML = justTemp_4+justTemp_3+justTemp_2+justTemp_1;
-}
 function fadeMe(e){
     var c = e.target.parentNode;
     c.getElementsByTagName("img")[0].outerHTML="";
