@@ -4,7 +4,7 @@ For more information and examples please visit: https://www.motionblurjs.com
 ## What is MotionBlurJS
 **MotionBlurJS** is a lightweight JavaScript library that allows your animations to shine with homemade native CSS Motion Blur and Motion Fade while keeping your code clean and your CSS animations smooth.
 
-## The simple method
+# The simple method
 You can use *MotionBlurJS* by simply linking to it in your document head tag like so:
 ```HTML
 <head>
@@ -19,7 +19,13 @@ or
 ```HTML
 <div id="yourId" class="fadejs someClass"></div> 
 ```
-## The dynamic method
+## Maintatining opacity with fadejs
+If your elements require opacity (alpha channel), you can achieve that with fadejs by adding the fadejs-data property to your animated elements, like so:
+```HTML
+<div id="yourId" class="fadejs someClass" fadejs-data="opacity: 0.6;"></div> 
+```
+Note that in this example the opacity will be 60% but the syntax is between 0-1 (similiar to CSS).
+# The dynamic method
 The dynamic method requires the same script linking as the simple method shown above.<br/>
 This method will allow you to dynamically blur the objects even if they won’t load with the page itself, to achieve this just add this img tag inside the div you want to blur, like so:
 ```HTML
@@ -33,7 +39,7 @@ or
     <img src="" onerror="fadeMe(event);" style="display:none !important;" />
 </div>
 ```
-## The SVG method
+# The SVG method
 This method can add motion blur to SVG elements and .SVG files, by simply linking to it first thing inside the svg tag, like so:
 ```HTML
 <svg ...>
@@ -47,7 +53,7 @@ or
 ```HTML
 <circle id="yourId" class="st0 fadejs" cx="200" cy="200" r="42" />
 ```
-## How does it work
+# How does it work
 **MotionBlurJS** will duplicate your objects so they can get blurred or faded on runtime, the DOM will only show the necessary objects (no pesky img tags) in order for it to work properly the blurred object has to be positioned absolutely and to be animated with CSS animation.
 
 ## Bug report
