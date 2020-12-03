@@ -24,7 +24,7 @@ If your elements require opacity (alpha channel), you can achieve that with fade
 ```HTML
 <div id="yourId" class="fadejs someClass" fadejs-data="opacity: 0.6;"></div> 
 ```
-Note that in this example the opacity will be 60% but the syntax is between 0-1 (similiar to CSS).
+Note that in this example the opacity will be 60% but the syntax is between 0-1 (like CSS).
 # The dynamic method
 The dynamic method requires the same script linking as the simple method shown above.<br/>
 This method will allow you to dynamically blur the objects even if they won’t load with the page itself, to achieve this just add this img tag inside the div you want to blur, like so:
