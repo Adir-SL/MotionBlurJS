@@ -8,7 +8,7 @@ For more information and examples please visit: https://adir-sl.github.io/mb-dem
 You can use *MotionBlurJS* by simply linking to it in your document head tag like so:
 ```HTML
 <head>
-    <script src="https://adir-sl.github.io/mb-demo/blur.js"></script>
+    <script src="https://adir-sl.github.io/MotionBlurJS/blur.js"></script>
 </head>
 ```
 After that, all you have to do is naming the class of the div you want to blur to either the **blurjs** or **fadejs** class, you can mix it with your current classes as well by separating those with spaces, like so:
@@ -43,7 +43,7 @@ or
 This method can add motion blur to SVG elements and .SVG files, by simply linking to it first thing inside the svg tag, like so:
 ```HTML
 <svg ...>
-    <script xlink:href="https://adir-sl.github.io/mb-demo/blurSVG.js" />
+    <script xlink:href="https://adir-sl.github.io/MotionBlurJS/blurSVG.js" />
 ```
 After that, all you have to do is naming the class of the element you want to blur to either the **blurjs** or **fadejs** class, you can mix it with your current classes as well by separating those with spaces, like so: 
 ```HTML
