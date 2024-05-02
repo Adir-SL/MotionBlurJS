@@ -39,6 +39,23 @@ or
     <img src="" onerror="fadeMe(event);" style="display:none !important;" />
 </div>
 ```
+# Adding more ghosts
+> [!IMPORTANT]
+> This is a new feature and is still tested. If something goes wrong, please let me know.
+
+Adding more ghosts can be done by altering the attribute `blurjs-ghost`, keep in mind that this attribute must only be a number.
+If not declared, this attribute will default to 4.
+```HTML
+<div class="rect" blurjs-ghost="12">
+    <img src="" onerror="fadeMe(event);" style="display: none !important" />
+</div>
+```
+or
+```HTML
+<div class="rect" blurjs-ghost="12">
+    <img src="" onerror="blurMe(event);" style="display: none !important" />
+</div>
+```
 # The SVG method
 This method can add motion blur to SVG elements and .SVG files, by simply linking to it first thing inside the svg tag, like so:
 ```HTML
