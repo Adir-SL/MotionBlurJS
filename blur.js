@@ -1,4 +1,4 @@
-function opacityFactor (opacity, f) {
+function opacityFactor(opacity, f) {
     return ((+opacity * f)).toString();
 }
 
@@ -46,44 +46,44 @@ function getSpecialOpacityFactor(x) {
     } else { return x > 0 ? 1 : 0; }
 }
 
-function whenDone(){
+function whenDone() {
     var x = document.getElementsByClassName("blurjs");
     var i;
     for (i = 0; i < x.length; i++) {
-        if(window.runScriptA !== 1){
+        if (window.runScriptA !== 1) {
             var y = x[i].parentNode.children;
             var r;
             for (r = 0; r < y.length; r++) {
-                if(y[r].className.search("blurjs") >= 0){
-                    if(y[r].className.search("scale") >= 0){
+                if (y[r].className.search("blurjs") >= 0) {
+                    if (y[r].className.search("scale") >= 0) {
                         var justTemp_1 = y[r].outerHTML.replace(/class=/, "style='animation-delay:0ms;--scale:1;' class=");
                         var justTemp_2 = y[r].outerHTML.replace(/class=/, "style='animation-delay:50ms;--scale:0.75;' class=");
                         var justTemp_3 = y[r].outerHTML.replace(/class=/, "style='animation-delay:100ms;--scale:0.5;' class=");
                         var justTemp_4 = y[r].outerHTML.replace(/class=/, "style='animation-delay:150ms;--scale:0.25;' class=");
-                        y[r].outerHTML = justTemp_4+justTemp_3+justTemp_2+justTemp_1;
+                        y[r].outerHTML = justTemp_4 + justTemp_3 + justTemp_2 + justTemp_1;
                         r += 3;
-                    }else{
-                    var justTemp_1 = y[r].outerHTML.replace(/class=/, "style='animation-delay:0ms;' class=");
-                    var justTemp_2 = y[r].outerHTML.replace(/class=/, "style='animation-delay:20ms;' class=");
-                    var justTemp_3 = y[r].outerHTML.replace(/class=/, "style='animation-delay:40ms;' class=");
-                    var justTemp_4 = y[r].outerHTML.replace(/class=/, "style='animation-delay:60ms;' class=");
-                    y[r].outerHTML = justTemp_4+justTemp_3+justTemp_2+justTemp_1;
-                    r += 3;
+                    } else {
+                        var justTemp_1 = y[r].outerHTML.replace(/class=/, "style='animation-delay:0ms;' class=");
+                        var justTemp_2 = y[r].outerHTML.replace(/class=/, "style='animation-delay:20ms;' class=");
+                        var justTemp_3 = y[r].outerHTML.replace(/class=/, "style='animation-delay:40ms;' class=");
+                        var justTemp_4 = y[r].outerHTML.replace(/class=/, "style='animation-delay:60ms;' class=");
+                        y[r].outerHTML = justTemp_4 + justTemp_3 + justTemp_2 + justTemp_1;
+                        r += 3;
                     }
                 }
             }
             window.runScriptA = 1;
-        }    
+        }
     }
 
     var x = document.getElementsByClassName("fadejs");
     var i;
     for (i = 0; i < x.length; i++) {
-        if(window.runScriptB !== 1){
+        if (window.runScriptB !== 1) {
             var y = x[i].parentNode.children;
             var r;
             for (r = 0; r < y.length; r++) {
-                if(y[r].className.search("fadejs") >= 0){
+                if (y[r].className.search("fadejs") >= 0) {
                     let opacityValues = getTrueOpacity(y[r]);
                     let opacity = opacityValues[0];
                     let specialOpacity = opacityValues[1];
@@ -91,7 +91,7 @@ function whenDone(){
                     var justTemp_2 = y[r].outerHTML.replace(/class=/, "style='animation-delay:20ms;opacity:" + opacityFactor(opacity, .75) + ";' class=");
                     var justTemp_3 = y[r].outerHTML.replace(/class=/, "style='animation-delay:40ms;opacity:" + opacityFactor(opacity, .5) + ";' class=");
                     var justTemp_4 = y[r].outerHTML.replace(/class=/, "style='animation-delay:60ms;opacity:" + opacityFactor(opacity, .25) + ";' class=");
-                    y[r].outerHTML = justTemp_4+justTemp_3+justTemp_2+justTemp_1;
+                    y[r].outerHTML = justTemp_4 + justTemp_3 + justTemp_2 + justTemp_1;
                     r += 3;
                 }
             }
@@ -102,21 +102,68 @@ function whenDone(){
 
 document.addEventListener("DOMContentLoaded", whenDone);
 
-function blurMe(e){
+// OLDER VERSIONS
+
+/*
+function blurMe(e) {
     var c = e.target.parentNode;
-    c.getElementsByTagName("img")[0].outerHTML="";
+    c.getElementsByTagName("img")[0].outerHTML = "";
     var justTemp_1 = c.outerHTML.replace(/class=/, "style='animation-delay:0ms;' class=");
     var justTemp_2 = c.outerHTML.replace(/class=/, "style='animation-delay:20ms;' class=");
     var justTemp_3 = c.outerHTML.replace(/class=/, "style='animation-delay:40ms;' class=");
     var justTemp_4 = c.outerHTML.replace(/class=/, "style='animation-delay:60ms;' class=");
-    c.outerHTML = justTemp_4+justTemp_3+justTemp_2+justTemp_1;
+    c.outerHTML = justTemp_4 + justTemp_3 + justTemp_2 + justTemp_1;
 }
-function fadeMe(e){
+*/
+
+/*
+function fadeMe(e) {
     var c = e.target.parentNode;
-    c.getElementsByTagName("img")[0].outerHTML="";
+    c.getElementsByTagName("img")[0].outerHTML = "";
     var justTemp_1 = c.outerHTML.replace(/class=/, "style='animation-delay:0ms;opacity:1;' class=");
     var justTemp_2 = c.outerHTML.replace(/class=/, "style='animation-delay:20ms;opacity:.75;' class=");
     var justTemp_3 = c.outerHTML.replace(/class=/, "style='animation-delay:40ms;opacity:.5;' class=");
     var justTemp_4 = c.outerHTML.replace(/class=/, "style='animation-delay:60ms;opacity:.25;' class=");
-    c.outerHTML = justTemp_4+justTemp_3+justTemp_2+justTemp_1;
+    c.outerHTML = justTemp_4 + justTemp_3 + justTemp_2 + justTemp_1;
+}
+*/
+
+function blurMe(e) {
+    var c = e.target.parentNode;
+    if (c.outerHTML.indexOf("blurjs-ghost") > 0) {
+        var g = Number(c.getAttribute("blurjs-ghost"));
+    } else {
+        var g = 4;
+    }
+
+    var temps = "";
+    c.getElementsByTagName("img")[0].outerHTML = "";
+    var d = c.outerHTML;
+
+    var i;
+    for (i = 1; i <= g; i++) {
+        var temp = d.replace(/class=/, "style='animation-delay:" + (g - i) * 20 + "ms; class=");
+        temps = temps + temp;
+    }
+    c.outerHTML = temps;
+}
+
+function fadeMe(e) {
+    var c = e.target.parentNode;
+    if (c.outerHTML.indexOf("blurjs-ghost") > 0) {
+        var g = Number(c.getAttribute("blurjs-ghost"));
+    } else {
+        var g = 4;
+    }
+
+    var temps = "";
+    c.getElementsByTagName("img")[0].outerHTML = "";
+    var d = c.outerHTML;
+
+    var i;
+    for (i = 1; i <= g; i++) {
+        var temp = d.replace(/class=/, "style='animation-delay:" + (g - i) * 20 + "ms;opacity:" + (100 - (g - i) * (100 / g)) + "%;' class=");
+        temps = temps + temp;
+    }
+    c.outerHTML = temps;
 }
