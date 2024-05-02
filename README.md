@@ -46,14 +46,14 @@ or
 Adding more ghosts can be done by altering the attribute `blurjs-ghost`, keep in mind that this attribute must only be a number.
 If not declared, this attribute will default to 4.
 ```HTML
-<div class="rect" blurjs-ghost="12">
-    <img src="" onerror="fadeMe(event);" style="display: none !important" />
+<div class="someClass" blurjs-ghost="12">
+    <img src="" onerror="blurMe(event);" style="display: none !important" />
 </div>
 ```
 or
 ```HTML
-<div class="rect" blurjs-ghost="12">
-    <img src="" onerror="blurMe(event);" style="display: none !important" />
+<div class="someClass" blurjs-ghost="12">
+    <img src="" onerror="fadeMe(event);" style="display: none !important" />
 </div>
 ```
 # The SVG method
