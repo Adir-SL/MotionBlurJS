@@ -61,6 +61,8 @@ This method can add motion blur to SVG elements and .SVG files, by simply linkin
 ```HTML
 <svg ...>
     <script xlink:href="https://adir-sl.github.io/MotionBlurJS/blurSVG.js"></script>
+    ...
+</svg>
 ```
 After that, all you have to do is naming the class of the element you want to blur to either the **blurjs** or **fadejs** class, you can mix it with your current classes as well by separating those with spaces, like so: 
 ```HTML
