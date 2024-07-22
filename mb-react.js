@@ -141,5 +141,8 @@ function fadeMe(e) {
     }
     c.outerHTML = temps;
 }
-
-module.exports = {whenDone, fadeMe, blurMe};
+function hello() {
+    console.log("HHEELLOO")
+}
+// module.exports = {whenDone, fadeMe, blurMe};
+module.exports = { hello };
